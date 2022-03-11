@@ -1,0 +1,101 @@
+CONFIGURAÇÕES INICIAIS
+
+  Sua identidade
+    git config --global user.name "NOME"
+    git config --global user.email "E-mail"
+
+  Mudar editor
+    git config --global core.editor "code -w"
+      Para usar o VScode
+
+  Ver configurações
+    git config --list
+
+  Cria uma pasta
+    mkdir git-aula
+
+  Cria um repositorio
+    git init
+
+FAZER COMMIT  
+  Adicionando todos os arquivos
+    git add .
+
+  Cria o commit 
+    git commit -m "uma mensagem"
+
+  Lista os logs de commit
+    git log
+    git log -n 5 
+      retorna o log dos 5 ultimos commits
+    git log --author= Nome do autor
+      busca pelo autores
+    git log --grep="parte da mensagem a ser buscada"
+
+  Mostra o que foi criado de arquivos ou modificados
+    git status
+
+  Remove um arquivo que foi add por engano
+    git rm --cached "nome do arquivo a ser removido"
+
+  commit rapido com mensagem para arquivos rastreados
+    git commit -am "mensagem"
+
+ALTERANDO ARQUIVOS 
+  Adicionando todos os arquivos
+    git add .
+
+  Adicionando todos os arquivos como tipo definido (.md .txt .css)
+    git add *.md
+
+  Mostra alterações nos arquivos
+    git diff
+
+  Mostra alterações nos arquivos que estão prontos pra commit
+    git diff --staged
+
+  Deletar arquivos 
+    git rm (nome do arquivo)
+
+  Mudar nome dos arquivos 
+    git mv (nome do arquivo) (novo nome)
+
+  Move o arquivo pra uma nova pasta
+    git mv (nome do arquivo) (nome da pasta)/(nome do arquivo)
+    git mv arquivo.txt pasta/arquivo.txt
+
+DESFAZER MUDANÇAS
+  
+  caso sejam feitas alterações em um arquivo que não deviam ser feitas
+    git restore (nome do arquivo)
+
+  Caso vc add um arquivo que não deveria ser enviado com o commit
+    git restore --staged (nome do arquivo)
+
+  Caso vc add todos os arquivo mas não deveria ser enviado todos vc pode remover todos com
+    git restore --staged .
+    
+  Muda a mensaem do ultimo commit feito
+    git commit --amend -m "nova mensagem"
+
+  Remover um arquivo que foi commitado
+    ls -al 
+      lista arquivos
+    git rm (nome do arquivo)
+      deleta arquivos
+    git add.
+    git commit --amend
+
+  Caso vc queira pegar um arquvio que foi alterado/removido em um commit anterior 
+    git checkout (id do commit) -- (nome do arquivo a ser buscado)
+
+  Reverter um commit
+    git revert HEAD~5
+      contagem da posição do commit desejado
+
+    git log --oneline
+      lista curta com menos detalhes
+
+    git revert (chave id do commit)
+      reverte o commit usando a chave dele
+

@@ -1,0 +1,18 @@
+CHAVE SSH 
+  ssh-keygen -t rsa -b 4096 -C "rafaeborba@gmail.com"
+    comando para criar a chave
+
+  cat ~/.ssh/id_rsa.pub 
+    mostra o conteudo da chave que deve ser copiado
+
+
+  Referencia : https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key-for-a-hardware-security-key
+
+  git branch -M main
+    muda branch de master para main
+
+  git push -u origin main  
+    envia o commit para a origem main caso seja o 1° commit de pode ser apenas git push
+
+  git pull
+    faz a atualização de arquivos caso alguem tenha add novos arquivos ou alterações
